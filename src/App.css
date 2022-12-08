@@ -1,0 +1,121 @@
+body{
+    background-image: url(/public/image/beaut.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+
+  h1 {
+    background-color:rgba(0, 0, 0, 0.774);
+    text-align: center ;
+    justify-content: center;
+    border-radius: 20px;
+    width: 400px;
+    height: 50px;
+    margin-left: 190px;
+    color: beige;
+    border: 4px solid rgba(255, 255, 0, 0.767);
+
+  }
+
+  h2 {
+    background-color:rgba(0, 0, 0, 0.774);
+    text-align: center ;
+    justify-content: center;
+    border-radius: 20px;
+    width: 300px;
+    height: 40px;
+    margin-left: 250px;
+    color: gold;
+    border: 4px solid rgba(255, 255, 0, 0.767);
+
+  }
+
+  .input-tile {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+
+  h3 {
+    background-color: rgba(0, 0, 0, 0.808);
+    text-align: center ;
+    justify-content: center;
+    border-radius: 20px;
+    width: 150px;
+    height: 30px;
+    color: aliceblue;
+    margin-left: 45px;
+  } 
+
+
+  .inputs {
+    background-color: rgba(0, 0, 255, 0.514);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 730px;
+    height: 130px;
+    border-radius: 25px;
+    border: 4px solid rgba(255, 255, 0, 0.767);
+    margin-left: 25px;
+  }
+
+  input { 
+    
+    height: 35px;
+    width: 200px;
+    border-radius: 20px;
+    text-align: center;
+    margin-left: 30px;
+    border: 3px solid black;
+    
+  }
+
+  .btn-add {
+    height: 50px;
+    width: 130px;
+    margin-top: 8px;
+    margin-left: 330px;
+    border: 4px solid rgba(255, 255, 0, 0.952);
+    border-radius: 35px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.795);
+    color: white; 
+    cursor: pointer;
+  }
+
+  .btn-add:hover {
+    background-color: rgb(38, 0, 255);
+    
+  }
+
+table, td {
+  border: 4px solid black ;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  width: 800px;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: rgba(0, 0, 255, 0.267);
+  color: white;
+  
+}
+
+.btn-delete {
+  height: 30px;
+  width: 100px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: darkorange
+  
+}
+
