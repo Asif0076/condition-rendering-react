@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import './App.css';
+import List from './components/List';
+
 
 function App() {
+  const [show, setShow] = useState(true)
 const [inputDataList, setInputDataList ] = useState([]);
 const [inputData, setInputData] = useState(
   {
-    name: " ",
-    age: " ",
-    designation: " "
+    name: "",
+    age: "",
+    designation: ""
 }
 );
 
@@ -23,7 +26,9 @@ setInputDataList([...inputDataList, inputData ])
 console.log([...inputDataList, inputData ]);
 }
 
-
+function  hideShow () {
+  setShow(!show)
+}
   return (
     <>  
 
@@ -32,19 +37,21 @@ console.log([...inputDataList, inputData ]);
         <div className='inputs'>
           <div className='head-input' >
            <h3>Name</h3>
-            <input type="text" name='name'  onChange={handleChange} value={inputData.name}  />
+            <input type="text" name='name'  onChange={handleChange} value={inputData.name} maxLength="15" placeholder='Enter Your Name' />
         </div>
         <div className='head-input'>
            <h3>Age</h3>
-            <input type="text" name='age'  onChange={handleChange} value={inputData.age}  />
+            <input type="text" name='age'  onChange={handleChange} value={inputData.age}  maxLength="15" placeholder='Enter Your Age' />
         </div>
-        <div className='head-input'>
+        <div className='head-input' >
            <h3>Designation</h3>
-            <input type="text" name='designation'  onChange={handleChange} value={inputData.designation}  />
+            <input type="text" name='designation'  onChange={handleChange} value={inputData.designation}  maxLength="15" placeholder='Enter Your Designation' />
         </div> 
         </div>
              <button className='btn-add' onClick={addData}>Add</button>
-       
+            <button className='btn-add1' onClick={hideShow}>View/Hide</button>
+          
+
         <table>
         <tbody>
           <tr>
@@ -52,19 +59,14 @@ console.log([...inputDataList, inputData ]);
             <td>Age</td>
             <td>designation</td>
           </tr>
-            {
-              inputDataList.map((info,index) => {
-                return (
-                  <tr key={index}>
-                    <td>{info.name}</td>
-                    <td>{info.age}</td>
-                    <td>{info.designation}</td>
-                  </tr>
-                )
-              })
-            }
+          
           </tbody>
         </table>
+
+{    
+  show ? <List inputDataList = {inputDataList}/> : null
+}
+
     </>
   );
 }
